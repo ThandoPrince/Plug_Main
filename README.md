@@ -2,7 +2,7 @@
 
 Plug is a service marketplace platform that connects clients with skilled service providers, enabling users to discover services, submit requests, manage bookings, and communicate through dedicated mobile applications.
 
-The Plug platform consists of three interconnected repositories:
+The Plug platform consists of four interconnected repositories:
 
 ## 📱 Client Application
 
@@ -14,9 +14,10 @@ The Plug Client Application is the mobile application used by clients to:
 * Create and manage bookings
 * Communicate with service providers
 * Manage service requests and bookings
+* Complete KYC verification
 
 **Repository:**
-[https://github.com/ThandoPrince/plug_app.git]
+[Plug Client](https://github.com/ThandoPrince/plug_app)
 
 ---
 
@@ -30,9 +31,10 @@ The Plug Service Provider Application is the mobile application used by service 
 * Communicate with clients
 * Manage their provider profile
 * Track and manage service activities
+* Complete KYC verification
 
 **Repository:**
-[https://github.com/ThandoPrince/provider_plug.git]
+[Plug Service Provider](https://github.com/ThandoPrince/provider_plug)
 
 ---
 
@@ -47,46 +49,84 @@ The Plug Backend provides the core server-side functionality for the platform, i
 * Real-time communication
 * Notifications
 * Location and service-provider functionality
+* KYC verification integration
 * API services consumed by the mobile applications
 
+The Plug Backend serves as the central communication layer between the Client Application, Service Provider Application, and AI KYC System.
+
 **Repository:**
-[(https://github.com/ThandoPrince/Plug_backend.git)]
+[Plug Backend](https://github.com/ThandoPrince/Plug_backend)
+
+---
+
+## 🤖 AI KYC System
+
+The AI KYC System is a dedicated verification service used by the Plug Backend for KYC processing and verification.
+
+The Client Application and Service Provider Application do not communicate directly with the AI KYC System. Both applications communicate with the Plug Backend, which handles KYC requests and communicates with the AI KYC System.
+
+**Repository:**
+[AI KYC System](YOUR_AI_KYC_REPOSITORY_LINK)
 
 ---
 
 ## 🏗️ Architecture
 
 ```text
-                 ┌─────────────────────────┐
-                 │    Plug Client App      │
-                 │       Flutter           │
-                 └────────────┬────────────┘
-                              │
-                              │ API / WebSocket
-                              │
-                 ┌────────────▼────────────┐
-                 │      Plug Backend       │
-                 │         Django          │
-                 └────────────▲────────────┘
-                              │
-                              │ API / WebSocket
-                              │
-                 ┌────────────┴────────────┐
-                 │ Plug Service Provider   │
-                 │       Flutter           │
-                 └─────────────────────────┘
+┌─────────────────────────┐
+│    Plug Client App      │
+│       Flutter           │
+└────────────┬────────────┘
+             │
+             │ API / WebSocket
+             ▼
+┌─────────────────────────┐
+│      Plug Backend       │
+│         Django          │
+└────────────┬────────────┘
+             │
+             │ API / WebSocket
+             ▼
+┌─────────────────────────┐
+│ Plug Service Provider   │
+│       Flutter           │
+└─────────────────────────┘
+
+
+             │
+             │ KYC API
+             ▼
+┌─────────────────────────┐
+│     AI KYC System       │
+│        FastAPI          │
+└─────────────────────────┘
 ```
+
+### Communication Flow
+
+```text
+Plug Client App ────────────┐
+                            │
+                            ▼
+                      Plug Backend
+                            │
+                            │
+Plug Service Provider ──────┘
+       App                  │
+                            │
+                            ▼
+                     AI KYC System
+```
+
+Both mobile applications communicate with the **Plug Backend**. The **Plug Backend is responsible for communicating with the AI KYC System** when KYC verification is required.
 
 ## 📂 Repository Structure
 
-| Repository            | Purpose                             |
-| --------------------- | ----------------------------------- |
-| Plug Client           | Client-facing mobile application    |
-| Plug Service Provider | Service-provider mobile application |
-| Plug Backend          | Backend API and platform services   |
+| Repository                                                             | Purpose                                     |
+| ---------------------------------------------------------------------- | ------------------------------------------- |
+| [Plug Client](https://github.com/ThandoPrince/plug_app)                | Client-facing Flutter mobile application    |
+| [Plug Service Provider](https://github.com/ThandoPrince/provider_plug) | Service-provider Flutter mobile application |
+| [Plug Backend](https://github.com/ThandoPrince/Plug_backend)           | Django backend API and platform services    |
+| AI KYC System                                                          | FastAPI-based KYC verification service      |
 
-## 🔗 Related Repositories
 
-* **Client Application:** [Repository Link]
-* **Service Provider Application:** [Repository Link]
-* **Backend API:** [Repository Link]
