@@ -50,7 +50,7 @@ The Plug Backend provides the core server-side functionality for the platform, i
 * API services consumed by the mobile applications
 
 **Repository:**
-[Insert Backend Repository Link]
+[(https://github.com/ThandoPrince/Plug_backend.git)]
 
 ---
 
