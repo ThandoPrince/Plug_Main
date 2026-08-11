@@ -66,7 +66,7 @@ The AI KYC System is a dedicated verification service used by the Plug Backend f
 The Client Application and Service Provider Application do not communicate directly with the AI KYC System. Both applications communicate with the Plug Backend, which handles KYC requests and communicates with the AI KYC System.
 
 **Repository:**
-[AI KYC System](YOUR_AI_KYC_REPOSITORY_LINK)
+[AI KYC System](https://github.com/ThandoPrince/plug_ai_kyc_service.git)
 
 ---
 
@@ -127,6 +127,6 @@ Both mobile applications communicate with the **Plug Backend**. The **Plug Backe
 | [Plug Client](https://github.com/ThandoPrince/plug_app)                | Client-facing Flutter mobile application    |
 | [Plug Service Provider](https://github.com/ThandoPrince/provider_plug) | Service-provider Flutter mobile application |
 | [Plug Backend](https://github.com/ThandoPrince/Plug_backend)           | Django backend API and platform services    |
-| AI KYC System                                                          | FastAPI-based KYC verification service      |
+| AI KYC System(https://github.com/ThandoPrince/plug_ai_kyc_service.git) | FastAPI-based KYC verification service      |
 
 
