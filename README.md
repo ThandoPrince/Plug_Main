@@ -16,7 +16,7 @@ The Plug Client Application is the mobile application used by clients to:
 * Manage service requests and bookings
 
 **Repository:**
-[Insert Client Repository Link]
+[https://github.com/ThandoPrince/plug_app.git]
 
 ---
 
@@ -32,7 +32,7 @@ The Plug Service Provider Application is the mobile application used by service 
 * Track and manage service activities
 
 **Repository:**
-[Insert Service Provider Repository Link]
+[https://github.com/ThandoPrince/provider_plug.git]
 
 ---
 
