@@ -16,6 +16,8 @@ Watch the Plug platform demonstration to see how clients and service providers i
 
 The Plug Client Application enables clients to:
 
+N.B! Only runs on Android
+
 - Discover available services.
 - Browse service providers.
 - Request services and negotiate prices.
@@ -26,12 +28,12 @@ The Plug Client Application enables clients to:
 
 **Links:**
 - **Source Code:** [Plug Client Repository](https://github.com/ThandoPrince/plug_app)
-- **Download App:** [Plug Client App](YOUR_CLIENT_APP_LINK)
+- **Download App:** [Plug Client App](https://1drv.ms/u/c/c9e3a0df5f41360f/IQDFX4zrKE5GT5th-oZAxpUsASchoBDfeU_pwdI_r2-wyn0?e=yUqgGM)
 
 ---
 
 ### 🧑‍🔧 Service Provider Application
-
+N.B! Only runs on Android
 The Plug Service Provider Application enables service providers to:
 
 - Create and manage their services.
