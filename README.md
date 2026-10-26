@@ -47,7 +47,7 @@ The Plug Service Provider Application enables service providers to:
 
 **Links:**
 - **Source Code:** [Plug Service Provider Repository](https://github.com/ThandoPrince/provider_plug)
-- **Download App:** [Plug Service Provider App](YOUR_PROVIDER_APP_LINK)
+- **Download App:** [Plug Service Provider App](https://1drv.ms/u/c/c9e3a0df5f41360f/IQCNYsGhyNNlS5qBc7M8GoQVATCI44TpT2k__XPsIFM11dM?e=oc8FqF)
 
 ---
 
