@@ -8,7 +8,7 @@ The Plug platform consists of four interconnected repositories, supported by a b
 
 Watch the Plug platform demonstration to see how clients and service providers interact with the platform, from discovering services and managing bookings to completing service sessions.
 
-**Demo Video:** [Watch the Plug Demo](YOUR_DEMO_VIDEO_LINK)
+**Demo Video:** [Watch the Plug Demo](https://1drv.ms/v/c/c9e3a0df5f41360f/IQDSxWHwiqXRTrzUaZ3M3pmvAbKxa_iD_TXDybJhdvUkTEk?e=Cj3m0Q)
 
 ## 📲 Mobile Applications
 
