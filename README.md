@@ -2,39 +2,50 @@
 
 Plug is a service marketplace platform that connects clients with skilled service providers, enabling users to discover services, submit requests, manage bookings, and communicate through dedicated mobile applications.
 
-The Plug platform consists of four interconnected repositories:
+The Plug platform consists of four interconnected repositories, supported by a backend API and an AI-powered KYC verification system.
 
-## 📱 Client Application
+## 🎥 Demo Video
 
-The Plug Client Application is the mobile application used by clients to:
+Watch the Plug platform demonstration to see how clients and service providers interact with the platform, from discovering services and managing bookings to completing service sessions.
 
-* Discover available services
-* Browse service providers
-* Request services
-* Create and manage bookings
-* Communicate with service providers
-* Manage service requests and bookings
-* Complete KYC verification
+**Demo Video:** [Watch the Plug Demo](YOUR_DEMO_VIDEO_LINK)
 
-**Repository:**
-[Plug Client](https://github.com/ThandoPrince/plug_app)
+## 📲 Mobile Applications
+
+### Client Application
+
+The Plug Client Application enables clients to:
+
+- Discover available services.
+- Browse service providers.
+- Request services and negotiate prices.
+- Create and manage bookings.
+- Communicate with service providers.
+- Track service activities.
+- Complete KYC verification.
+
+**Links:**
+- **Source Code:** [Plug Client Repository](https://github.com/ThandoPrince/plug_app)
+- **Download App:** [Plug Client App](YOUR_CLIENT_APP_LINK)
 
 ---
 
-## 🧑‍🔧 Service Provider Application
+### 🧑‍🔧 Service Provider Application
 
-The Plug Service Provider Application is the mobile application used by service providers to:
+The Plug Service Provider Application enables service providers to:
 
-* Manage their services
-* Receive service requests
-* Manage bookings
-* Communicate with clients
-* Manage their provider profile
-* Track and manage service activities
-* Complete KYC verification
+- Create and manage their services.
+- Receive and respond to service requests.
+- Negotiate prices and manage bookings.
+- Communicate with clients.
+- Manage their provider profiles.
+- Track and manage service activities.
+- Complete KYC verification.
+- Confirm service completion and rate clients.
 
-**Repository:**
-[Plug Service Provider](https://github.com/ThandoPrince/provider_plug)
+**Links:**
+- **Source Code:** [Plug Service Provider Repository](https://github.com/ThandoPrince/provider_plug)
+- **Download App:** [Plug Service Provider App](YOUR_PROVIDER_APP_LINK)
 
 ---
 
@@ -42,35 +53,33 @@ The Plug Service Provider Application is the mobile application used by service 
 
 The Plug Backend provides the core server-side functionality for the platform, including:
 
-* Client authentication and management
-* Service provider management
-* Service management
-* Bookings
-* Real-time communication
-* Notifications
-* Location and service-provider functionality
-* KYC verification integration
-* API services consumed by the mobile applications
+- Client authentication and management.
+- Service provider management.
+- Service management.
+- Booking and negotiation workflows.
+- Real-time communication.
+- Notifications.
+- Location and service-provider functionality.
+- KYC verification integration.
+- API services consumed by the mobile applications.
 
-The Plug Backend serves as the central communication layer between the Client Application, Service Provider Application, and AI KYC System.
+The backend serves as the central communication layer between the Client Application, Service Provider Application, and AI KYC System.
 
-**Repository:**
-[Plug Backend](https://github.com/ThandoPrince/Plug_backend)
+**Repository:** [Plug Backend](https://github.com/ThandoPrince/Plug_backend)
 
 ---
 
 ## 🤖 AI KYC System
 
-The AI KYC System is a dedicated verification service used by the Plug Backend for KYC processing and verification.
+The AI KYC System is a dedicated verification service used by the Plug Backend for identity verification and KYC processing.
 
-The Client Application and Service Provider Application do not communicate directly with the AI KYC System. Both applications communicate with the Plug Backend, which handles KYC requests and communicates with the AI KYC System.
+The Client Application and Service Provider Application do not communicate directly with the AI KYC System. Both applications communicate with the Plug Backend, which processes KYC requests and communicates with the AI KYC System.
 
-**Repository:**
-[AI KYC System](https://github.com/ThandoPrince/plug_ai_kyc_service.git)
+**Repository:** [AI KYC System](https://github.com/ThandoPrince/plug_ai_kyc_service)
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ System Architecture
 
 ```text
 ┌─────────────────────────┐
@@ -92,7 +101,6 @@ The Client Application and Service Provider Application do not communicate direc
 │       Flutter           │
 └─────────────────────────┘
 
-
              │
              │ KYC API
              ▼
@@ -110,23 +118,32 @@ Plug Client App ────────────┐
                             ▼
                       Plug Backend
                             │
+                            ├──────────► AI KYC System
                             │
 Plug Service Provider ──────┘
-       App                  │
-                            │
-                            ▼
-                     AI KYC System
+         App
 ```
 
-Both mobile applications communicate with the **Plug Backend**. The **Plug Backend is responsible for communicating with the AI KYC System** when KYC verification is required.
+Both mobile applications communicate with the **Plug Backend**. The backend handles communication with the AI KYC System whenever identity verification is required.
+
+---
 
 ## 📂 Repository Structure
 
-| Repository                                                             | Purpose                                     |
-| ---------------------------------------------------------------------- | ------------------------------------------- |
-| [Plug Client](https://github.com/ThandoPrince/plug_app)                | Client-facing Flutter mobile application    |
+| Repository | Purpose |
+|---|---|
+| [Plug Client](https://github.com/ThandoPrince/plug_app) | Client-facing Flutter mobile application |
 | [Plug Service Provider](https://github.com/ThandoPrince/provider_plug) | Service-provider Flutter mobile application |
-| [Plug Backend](https://github.com/ThandoPrince/Plug_backend)           | Django backend API and platform services    |
-| AI KYC System(https://github.com/ThandoPrince/plug_ai_kyc_service.git) | FastAPI-based KYC verification service      |
+| [Plug Backend](https://github.com/ThandoPrince/Plug_backend) | Django backend API and platform services |
+| [AI KYC System](https://github.com/ThandoPrince/plug_ai_kyc_service) | FastAPI-based KYC verification service |
 
+---
+
+## 🛠️ Technology Stack
+
+- **Mobile Applications:** Flutter / Dart
+- **Backend API:** Django / Django REST Framework
+- **AI KYC Service:** FastAPI
+- **Communication:** REST API / WebSockets
+- **Authentication:** JWT and OTP-based verification
 
